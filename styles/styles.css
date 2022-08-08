@@ -118,14 +118,14 @@ canvas.particles-js-canvas-el{
     color:  var(--hicolor)
 }
 
-.con{
+.contact{
     background: var(--bgcolor);
     border-top: 4px solid var(--hicolor);
     padding: 40px 0px;
     margin-top:50px;
 }
 
-.con .logo-area .fa{
+.contact .logo-area .fa{
     color: var(--tcolor-1);
     font-size: 17px !important;
     border: 2px solid var(--hicolor);
@@ -139,53 +139,52 @@ canvas.particles-js-canvas-el{
     margin-right: 5px;
 }
 
-.con .logo-area .fa:hover {
+.contact .logo-area .fa:hover {
     animation: swing;
     animation-duration: 0.5s;
-
 }
 
-.con .links{
+.contact .links{
     text-align: center;
     padding: 15px;
 }
 
-.pub {
+.publication {
     margin-top: 100px;
 }
-.pub .research .perodical{
+.publication .research .perodical{
     color: var(--hicolor) !important
 }
 
-.pub .research{
+.publication .research{
     color: var(--tcolor-1);
     position: relative;
     width: 80%;
     padding-right: 15px;
     padding-left: 15px;
 }
-.pub .research .title a{
+.publication .research .title a{
     text-decoration: none;
     color: var(--tcolor-1);
     font-weight:800
 }
 
-.pub .publications {
+.publication .publications {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.pub .publications ol{
+.publication .publications ol{
     list-style-type: none
 }
-.pub .publications .row{
+.publication .publications .row{
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
 }
 
-.pub .publications h2.year {
+.publication .publications h2.year {
     color: var(--tcolor-1);
     border-top: 1px solid var(--hicolor);
     padding-top: 1rem;
@@ -194,30 +193,43 @@ canvas.particles-js-canvas-el{
     text-align: right;
 }
 
-.project .project_content .proj_title{
-    font-weight:900
+.project .box{
+    position : relative;
+    width : calc(400px - 30px);
+    height : calc(300px - 30px);
+    background : #b8a89190;
+    float : Left;
+    margin : 15px;
+    box-sizing : border-box;
+    overflow : hidden;
+    border-radius : 20px;
+    border: solid 1px rgb(0, 0, 0);
 }
 
-.project .project_content{
-    color: var(--tcolor-1)
+.project .box:hover {
+	background: rgba(151, 34, 34, 0.477);
+	box-shadow: inset 0 0 0 3px  #000000;
+    animation : zoom-in 1s ease infinite;
 }
 
-.project .project_content p{
-    text-align:justify
-}
+@keyframes zoom-in {
+    0% {
+        transform: scale(1, 1);
+      }
+    100% {
+        transform: scale(0.9, 0.9);
+      }
+  }
 
-.project .project_content .link a{
-    color: var(--hicolor);
-    text-decoration: none
-}
 
-.project .project_content .contrib{
-    color: var(--hicolor);
-}
-
-.project .project_content .des {
-    margin-top: 2px;
-    margin-bottom: 2px;
+.project .box .title1{
+    position : absolute;
+    text-align : center;
+    padding : 90px;
+    box-sizing: border-box;
+    color : #000000;
+    font-size:22px;
+    font-weight: 500;
 }
 
 .skill .content {
@@ -241,7 +253,7 @@ canvas.particles-js-canvas-el{
 {
     display: inline-block;
     color: #040722;
-    border: 1px solid #c7cad1;
+    border: 1px solid #00000000;
     padding: 6px 27px;
     background: #c7cad1;
     position: relative;
@@ -251,7 +263,106 @@ canvas.particles-js-canvas-el{
 .hero-btn:hover
 {
     color: #040722;
-    border: 1px solid #c7cad1;
+    border: 1px solid #00020700;
     background: #f3e6ae59;
     transition: 1s;
+}
+
+.Soft_project .project_content .proj_title{
+    font-weight:900
+}
+
+.Soft_project .project_content{
+    color: var(--tcolor-1)
+}
+
+.Soft_project .project_content p{
+    text-align:justify
+}
+
+.Soft_project .project_content .link a{
+    color: var(--hicolor);
+    text-decoration: none
+}
+
+.Soft_project .project_content .contrib{
+    color: var(--hicolor);
+}
+
+.Soft_project .project_content .des {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.Hard_project .project_content .proj_title{
+    font-weight:900
+}
+
+.Hard_project .project_content{
+    color: var(--tcolor-1)
+}
+
+.Hard_project .project_content p{
+    text-align:justify
+}
+
+.Hard_project .project_content .link a{
+    color: var(--hicolor);
+    text-decoration: none
+}
+
+.Hard_project .project_content .contrib{
+    color: var(--hicolor);
+}
+
+.Hard_project .project_content .des {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.Ds_project .project_content .proj_title{
+    font-weight:900
+}
+
+.Ds_project .project_content{
+    color: var(--tcolor-1)
+}
+
+.Ds_project .project_content p{
+    text-align:justify
+}
+
+.Ds_project .project_content .link a{
+    color: var(--hicolor);
+    text-decoration: none
+}
+
+.Ds_project .project_content .contrib{
+    color: var(--hicolor);
+}
+
+.Ds_project .project_content .des {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+@keyframes bounces {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+button:hover {
+	animation: bounces 1s;
 }
